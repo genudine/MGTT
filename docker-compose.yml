@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+  pg:
+    image: postgres:9.6
+    container_name: mgtt-pg
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 19216801
+      POSTGRES_DB: libertyrp
+      POSTGRES_USER: libertyrp
+      POSTGRES_INITDB_ARGS: -A trust
+
+  redis:
+    image: redis:3-alpine
+    container_name: mgtt-redis
+    command: redis-server --appendonly yes
+    ports:
+        - "6379:6379"

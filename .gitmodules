@@ -1,0 +1,3 @@
+[submodule "backend/libs/event-stream"]
+	path = backend/libs/event-stream
+	url = git@github.com:kayteh/dbg-event-stream.git
